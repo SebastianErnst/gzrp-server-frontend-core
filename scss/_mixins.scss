@@ -1,0 +1,111 @@
+// Breakpoints
+$breakpoints: (
+        'small': 480px,
+        'medium': 880px,
+        'large': 1366px,
+        'xlarge': 1920px,
+);
+
+$media-direction: min; // min / max — default is min (mobile first)
+
+@mixin breakpoint($breakpoint,$direction: $media-direction) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media (#{$direction}-width: #{map-get($breakpoints, $breakpoint)}) {
+            @content;
+        }
+    } @else if unitless($breakpoint) {
+        $breakpoint: $breakpoint + 0px;
+        @media (#{$direction}-width: $breakpoint) {
+            @content;
+        }
+    }
+}
+
+@mixin rest-list() {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+@mixin absolute-stretch() {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+@mixin text-shadow() {
+    text-shadow: 2px 2px black;
+}
+
+@mixin hover-gradient() {
+    overflow: hidden;
+    &::after {
+        @include absolute-stretch();
+        z-index: 1;
+        content: "";
+        background: {
+            image: linear-gradient(to right, transparent 75%, var(--button-hover-border-color));
+        }
+        transform: translateX(50%);
+        transition: transform 0.3s ease-out;
+    }
+    &:hover {
+        &::before {
+            transform: translateX(0);
+        }
+    }
+}
+
+@mixin hover-gradient-base() {
+    overflow: hidden;
+    &::after {
+        @include absolute-stretch();
+        z-index: 1;
+        content: "";
+        background: {
+            image: linear-gradient(to right, transparent 75%, var(--cta-color-2));
+        }
+        transform: translateX(50%);
+        transition: transform 0.3s ease-out;
+    }
+}
+
+@mixin hover-gradient-active() {
+    &::after {
+        transform: translateX(0);
+    }
+}
+
+@mixin hover-gradient-inactive() {
+    &::after {
+        transform: translateX(50%);
+    }
+}
+
+@function _fix-unicode($unicode) {
+    @return unquote("\"") + $unicode + unquote("\"");
+}
+
+@mixin icon-font() {
+    font: {
+        family: "icomoon" !important;
+        style: normal;
+        variant: normal;
+        weight: normal;
+    }
+    speak: none;
+    text: {
+        transform: none;
+    }
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin icon($name: null, $font-styles: true) {
+    content: _fix-unicode($name);
+    @if ($font-styles) {
+        @include icon-font();
+    }
+}

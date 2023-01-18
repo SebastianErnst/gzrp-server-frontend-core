@@ -1,0 +1,20 @@
+@use "mixins" as mixins;
+
+.footer {
+    padding: {
+        top: var(--spacing-large);
+        bottom: var(--spacing-large);
+    }
+    .section-wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    .footer-list {
+        @include mixins.rest-list();
+        margin: {
+            left: auto;
+        }
+        display: flex;
+        gap: var(--spacing-large);
+    }
+}

@@ -1,0 +1,22 @@
+@import "mixins";
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: var(--font-color);
+    font: {
+        family: var(--font-family);
+        weight: 400;
+        size: 87.5%;
+    }
+}

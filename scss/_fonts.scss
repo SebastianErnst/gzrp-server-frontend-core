@@ -1,0 +1,46 @@
+@font-face {
+    font: {
+        family: "icomoon";
+        display: block;
+        style: normal;
+        weight: normal;
+    }
+    src: url("../fonts/icomoon.woff") format("truetype"),
+    url("../fonts/icomoon.ttf") format("truetype");
+}
+
+@font-face {
+    font: {
+        family: "Roboto";
+        weight: 300;
+        style: normal;
+    }
+    src: url("../fonts/Roboto-Light.ttf") format("truetype");
+}
+
+@font-face {
+    font: {
+        family: "Roboto";
+        weight: 400;
+        style: normal;
+    }
+    src: url("../fonts/Roboto-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font: {
+        family: "Roboto";
+        weight: 500;
+        style: normal;
+    }
+    src: url("../fonts/Roboto-Medium.ttf") format("truetype");
+}
+
+@font-face {
+    font: {
+        family: "Anton";
+        weight: 400;
+        style: normal;
+    }
+    src: url("../fonts/Anton-Regular.ttf") format("truetype");
+}

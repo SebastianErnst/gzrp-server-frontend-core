@@ -1,0 +1,86 @@
+@import "mixins";
+
+button,
+.button {
+    position: relative;
+    overflow: hidden;
+    min: {
+        width: 10rem;
+    }
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+    border: {
+        width: 2px;
+        style: solid;
+        color: var(--button-border-color);
+        radius: var(--border-radius);
+    }
+    color: var(--button-color);
+    padding: {
+        top: 1rem;
+        right: 2rem;
+        bottom: 1rem;
+        left: 2rem;
+    }
+    background: {
+        color: var(--grey-dark-color-15);
+    }
+    transition:
+            color var(--button-hover-transition-out),
+            border-color var(--button-hover-transition-out),
+            background-color var(--button-hover-transition-out);
+    @include hover-gradient-base();
+    @include hover-gradient-active();
+    background: {
+        color: var(--button-background-color);
+    }
+    &.big {
+        @include breakpoint(medium) {
+            padding: {
+                top: 2rem;
+                right: 4rem;
+                bottom: 2rem;
+                left: 4rem;
+            }
+            font: {
+                size: var(--font-size-large);
+            }
+        }
+    }
+    span {
+        position: relative;
+        z-index: 2;
+        text-transform: uppercase;
+        font: {
+            size: var(--font-size-default);
+            weight: var(--font-weight-bold);
+        }
+    }
+    &:hover {
+        @include hover-gradient-inactive();
+        color: var(--button-hover-color);
+        border: 2px solid var(--button-hover-border-color);
+        transition:
+                color var(--button-hover-transition-in),
+                border-color var(--button-hover-transition-in),
+                background-color var(--button-hover-transition-in);
+        transition-delay: 0.075s;
+        background: {
+            color: var(--button-background-hover-color);
+        }
+        &::before {
+            transition: transform var(--button-hover-transition-in);
+        }
+    }
+    &.secondary {
+        border: {
+            color: var(--button-secondary-border-color);
+        }
+        color: var(--button-secondary-color);
+        &:hover {
+            color: var(--button-secondary-hover-color);
+            border: 2px solid var(--button-secondary-hover-border-color);
+        }
+    }
+}

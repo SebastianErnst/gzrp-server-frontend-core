@@ -1,0 +1,39 @@
+section,
+.section {
+    background: {
+        color: black;
+    }
+    max: {
+        width: var(--content-max-width);
+    }
+    padding: {
+        top: var(--spacing-xlarge);
+        bottom: var(--spacing-xlarge);
+    }
+    margin: {
+        right: auto;
+        left: auto;
+    }
+}
+
+.section-wrapper {
+    margin: {
+        right: auto;
+        left: auto;
+    }
+    width: 100%;
+    max: {
+        width: var(--section-max-width);
+    }
+    padding: {
+        right: var(--spacing-large);
+        left: var(--spacing-large);
+    }
+    > * {
+        &:last-child {
+            margin: {
+                bottom: 0;
+            }
+        }
+    }
+}

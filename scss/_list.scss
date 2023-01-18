@@ -1,0 +1,10 @@
+@import "mixins";
+
+.button-list {
+    @include rest-list();
+    display: flex;
+    gap: 1rem;
+    flex: {
+        wrap: wrap;
+    }
+}

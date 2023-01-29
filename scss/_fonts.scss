@@ -5,8 +5,8 @@
         style: normal;
         weight: normal;
     }
-    src: url("./node_modules/gzrp-server-frontend-core/fonts/icomoon.woff") format("truetype"),
-    url("./node_modules/gzrp-server-frontend-core/fonts/icomoon.ttf") format("truetype");
+    src: url("icomoon.woff") format("truetype"),
+    url("icomoon.ttf") format("truetype");
 }
 
 @font-face {
@@ -15,7 +15,7 @@
         weight: 300;
         style: normal;
     }
-    src: url("./node_modules/gzrp-server-frontend-core/fonts/Roboto-Light.ttf") format("truetype");
+    src: url("Roboto-Light.ttf") format("truetype");
 }
 
 @font-face {
@@ -24,7 +24,7 @@
         weight: 400;
         style: normal;
     }
-    src: url("./node_modules/gzrp-server-frontend-core/fonts/Roboto-Regular.ttf") format("truetype");
+    src: url("Roboto-Regular.ttf") format("truetype");
 }
 
 @font-face {
@@ -33,7 +33,7 @@
         weight: 500;
         style: normal;
     }
-    src: url("./node_modules/gzrp-server-frontend-core/fonts/Roboto-Medium.ttf") format("truetype");
+    src: url("Roboto-Medium.ttf") format("truetype");
 }
 
 @font-face {
@@ -42,5 +42,5 @@
         weight: 400;
         style: normal;
     }
-    src: url("./node_modules/gzrp-server-frontend-core/fonts/Anton-Regular.ttf") format("truetype");
+    src: url("Anton-Regular.ttf") format("truetype");
 }

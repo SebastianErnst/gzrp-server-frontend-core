@@ -34,13 +34,16 @@ a {
             }
         }
         border: {
-            radius: var(--border-radius);
+            radius: 50%;
         }
-        width: 75px;
-        display: flex;
+        display: inline-flex;
         justify-content: center;
         align-items: center;
+        width: 75px;
         aspect-ratio: 1;
+        border: {
+            radius: 50%;
+        }
         background: {
             color: var(--cta-color-2);
         }

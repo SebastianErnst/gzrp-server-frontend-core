@@ -1,6 +1,6 @@
 import NUICallbackHandler from 'NUICallbackHandler';
 
-class GzrpModule {
+export default class GzrpModule {
     constructor() {
         this.ingame = true;
         this.$body = document.querySelector('body');

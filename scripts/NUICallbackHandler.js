@@ -1,6 +1,5 @@
 export default class NUICallbackHandler {
     sendNUICallback(endpoint, data = {}) {
-        console.log(data);
         const request = new Request(`http://${endpoint}`, {
             method: 'post',
             credentials: 'include',

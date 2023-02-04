@@ -151,6 +151,9 @@ $media-direction: min; // min / max — default is min (mobile first)
     background: {
         color: var(--cta-color-2);
     }
+    border: {
+        radius: 10px;
+    }
     @if ($blurry == true) {
         filter: blur(3px);
     }

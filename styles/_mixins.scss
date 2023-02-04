@@ -127,3 +127,42 @@ $media-direction: min; // min / max — default is min (mobile first)
         }
     }
 }
+
+@mixin deco-line-left($blurry: true, $small: false) {
+    &::before {
+        @include deco-line-base($blurry, $small);
+        left: 0;
+        translate: -50% -50%;
+    }
+}
+
+@mixin deco-line-right($blurry: true, $small: false) {
+    &::after {
+        @include deco-line-base($blurry, $small);
+        right: 0;
+        translate: 50% -50%;
+    }
+}
+
+@mixin deco-line-base($blurry, $small) {
+    content: "";
+    position: absolute;
+    top: 50%;
+    background: {
+        color: var(--cta-color-2);
+    }
+    @if ($blurry == true) {
+        filter: blur(3px);
+    }
+    @if ($small == true) {
+        height: calc(100% - (var(--spacing-default) * 2));
+        width: 8px;
+        filter: none;
+    } @else  {
+        height: calc(100% - (var(--spacing-xlarge) * 2));
+        width: 12px;
+        border: {
+            radius: var(--border-radius);
+        }
+    }
+}

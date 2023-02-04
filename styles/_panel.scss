@@ -21,6 +21,17 @@
         radius: var(--border-radius);
     }
     position: relative;
+    &.small {
+        padding: {
+            top: var(--spacing-default);
+            right: var(--spacing-default);
+            bottom: var(--spacing-default);
+            left: var(--spacing-default);
+        }
+        border: {
+            radius: var(--border-radius-small);
+        }
+    }
     &::before {
         content: "";
         position: absolute;

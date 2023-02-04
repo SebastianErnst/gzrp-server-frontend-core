@@ -3,14 +3,18 @@
 $icomoon-font-family: "icomoon" !default;
 $icomoon-font-path: "fonts" !default;
 
+$icon-waterdrop: "\e907";
 $icon-discord: "\e903";
 $icon-teamspeak: "\e904";
+$icon-shield: "\e906";
+$icon-lunch_dining: "\e905";
 $icon-radio: "\e900";
 $icon-money-bag: "\e901";
 $icon-dollar: "\e902";
+$icon-heart: "\f004";
 $icon-credit-card: "\f09d";
+$icon-microphone: "\f130";
 $icon-feed: "\e91d";
-$icon-mic: "\e91e";
 $icon-user: "\e971";
 $icon-lab: "\e9aa";
 $icon-circle-right: "\ea42";
@@ -27,9 +31,33 @@ $icon-youtube: "\ea9d";
     }
 }
 
-.user {
+.heart {
     &::before {
-        @include mixins.icon($icon-user);
+        @include mixins.icon($icon-heart);
+    }
+}
+
+.heart {
+    &::before {
+        @include mixins.icon($icon-heart);
+    }
+}
+
+.lunch {
+    &::before {
+        @include mixins.icon($icon-lunch_dining);
+    }
+}
+
+.shield {
+    &::before {
+        @include mixins.icon($icon-shield);
+    }
+}
+
+.waterdrop {
+    &::before {
+        @include mixins.icon($icon-waterdrop);
     }
 }
 
@@ -39,9 +67,15 @@ $icon-youtube: "\ea9d";
     }
 }
 
-.mic {
+.user {
     &::before {
-        @include mixins.icon($icon-mic);
+        @include mixins.icon($icon-user);
+    }
+}
+
+.microphone {
+    &::before {
+        @include mixins.icon($icon-microphone);
     }
 }
 

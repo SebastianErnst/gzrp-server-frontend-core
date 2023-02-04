@@ -3,14 +3,16 @@
 $icomoon-font-family: "icomoon" !default;
 $icomoon-font-path: "fonts" !default;
 
-$icon-discord: "\e900";
-$icon-teamspeak: "\e901";
-$icon-coin-dollar: "\e93b";
-$icon-users: "\e972";
+$icon-discord: "\e903";
+$icon-teamspeak: "\e904";
+$icon-radio: "\e900";
+$icon-money-bag: "\e901";
+$icon-dollar: "\e902";
+$icon-credit-card: "\f09d";
+$icon-feed: "\e91d";
+$icon-mic: "\e91e";
+$icon-user: "\e971";
 $icon-lab: "\e9aa";
-$icon-arrow-right: "\ea34";
-$icon-arrow-down: "\ea36";
-$icon-arrow-left: "\ea38";
 $icon-circle-right: "\ea42";
 $icon-circle-left: "\ea44";
 $icon-facebook: "\ea90";
@@ -25,9 +27,57 @@ $icon-youtube: "\ea9d";
     }
 }
 
+.user {
+    &::before {
+        @include mixins.icon($icon-user);
+    }
+}
+
+.user {
+    &::before {
+        @include mixins.icon($icon-user);
+    }
+}
+
+.mic {
+    &::before {
+        @include mixins.icon($icon-mic);
+    }
+}
+
+.feed {
+    &::before {
+        @include mixins.icon($icon-feed);
+    }
+}
+
+.credit-card {
+    &::before {
+        @include mixins.icon($icon-credit-card);
+    }
+}
+
+.dollar {
+    &::before {
+        @include mixins.icon($icon-dollar);
+    }
+}
+
+.radio {
+    &::before {
+        @include mixins.icon($icon-radio);
+    }
+}
+
 .teamspeak {
     &::before {
         @include mixins.icon($icon-teamspeak);
+    }
+}
+
+.money-bag {
+    &::before {
+        @include mixins.icon($icon-money-bag);
     }
 }
 
@@ -49,8 +99,6 @@ $icon-youtube: "\ea9d";
     }
 }
 
-
-
 .instagram {
     &::before {
         @include mixins.icon($icon-instagram);
@@ -63,26 +111,12 @@ $icon-youtube: "\ea9d";
     }
 }
 
-.arrow-right {
-    &:before {
-        @include mixins.icon($icon-arrow-right);
-    }
-}
-.arrow-down {
-    &:before {
-        @include mixins.icon($icon-arrow-down);
-    }
-}
-.arrow-left {
-    &:before {
-        @include mixins.icon($icon-arrow-left);
-    }
-}
 .circle-right {
     &:before {
         @include mixins.icon($icon-circle-right);
     }
 }
+
 .circle-left {
     &:before {
         @include mixins.icon($icon-circle-left);

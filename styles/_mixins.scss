@@ -109,3 +109,21 @@ $media-direction: min; // min / max — default is min (mobile first)
         @include icon-font();
     }
 }
+
+@mixin cross-out-icon() {
+    &::after {
+        z-index: 1;
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        right: 0;
+        translate: -50% -50%;
+        width: 5px;
+        height: 100%;
+        rotate: 45deg;
+        background: {
+            color: var(--cta-color-2);
+        }
+    }
+}

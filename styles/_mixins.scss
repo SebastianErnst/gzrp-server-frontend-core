@@ -119,12 +119,13 @@ $media-direction: min; // min / max — default is min (mobile first)
         left: 50%;
         right: 0;
         translate: -50% -50%;
-        width: 5px;
-        height: 100%;
-        rotate: 45deg;
+        width: 6px;
+        height: 40px;
+        rotate: -50deg;
         background: {
             color: var(--cta-color-2);
         }
+        border-radius: 15px;
     }
 }
 

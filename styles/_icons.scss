@@ -22,6 +22,8 @@ $icon-circle-left: "\ea44";
 $icon-facebook: "\ea90";
 $icon-instagram: "\ea92";
 $icon-youtube: "\ea9d";
+$icon-seat-belt: "\e908";
+$icon-fuel: "\e909";
 
 .icon {
     &::before {
@@ -37,9 +39,15 @@ $icon-youtube: "\ea9d";
     }
 }
 
-.heart {
+.icon-fuel {
     &::before {
-        @include mixins.icon($icon-heart);
+        @include mixins.icon($icon-fuel);
+    }
+}
+
+.seat-belt {
+    &::before {
+        @include mixins.icon($seat-belt);
     }
 }
 

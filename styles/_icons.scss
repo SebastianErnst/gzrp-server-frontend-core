@@ -39,7 +39,7 @@ $icon-fuel: "\e909";
     }
 }
 
-.icon-fuel {
+.fuel {
     &::before {
         @include mixins.icon($icon-fuel);
     }

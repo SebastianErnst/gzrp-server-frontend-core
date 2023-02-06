@@ -47,7 +47,7 @@ $icon-fuel: "\e909";
 
 .seat-belt {
     &::before {
-        @include mixins.icon($seat-belt);
+        @include mixins.icon($icon-seat-belt);
     }
 }
 

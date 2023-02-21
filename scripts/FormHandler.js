@@ -73,7 +73,7 @@ export default class FormHandler {
             }
 
             if ($input.getAttribute('type') === 'date') {
-                const options = {year: 'numeric', month: 'numeric', day: 'numeric'};
+                const options = {year: 'numeric', month: '2-digit', day: '2-digit'};
                 value = new Date(value).toLocaleDateString('de-DE', options);
                 value = value.replaceAll('.', '/');
             }
@@ -166,8 +166,12 @@ export default class FormHandler {
     }
 
     _specialChars(value) {
-        const format = /[!-\/:-@[-`{-~]/;
+        let format = /[!-\/:-@[-`{-~]/;
         if (format.test(value)) {
+            return this.errorMessageHelper.specialChars();
+        }
+        format = /^[a-zA-Z]+$/;
+        if (format.test(value) === false) {
             return this.errorMessageHelper.specialChars();
         }
 
